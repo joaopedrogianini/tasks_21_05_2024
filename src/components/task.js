@@ -10,9 +10,9 @@ export default props => {
     const formated_date = moment(date).format('ddd, D [de] MMM')
     return (
         <View style={styles.container}>
-            <TouchableWithoutFeedback onPress={()=> alert("Olá")}>
+            <TouchableWithoutFeedback onPress={() => this.props.toggle_task(props.id)}>
                 <View style={styles.checkContainer}>
-                  {get_Check_View(props.done.at)}
+                    {get_Check_View(props.done_at)}
                 </View>
             </TouchableWithoutFeedback>
             <View>
